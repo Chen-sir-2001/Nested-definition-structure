@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    struct date
+    {
+        int month;
+        int day;
+        int yeas;
+    };
+
+    struct student
+    {
+        int num;
+        char *name;
+        struct date birthday;         //嵌套一个deta结构体，birthday相当于deta结构体的变量
+        char sex;
+        float score;
+    }boy1,boy2;
+    printf("请输入年月日：\n");
+    scanf("%d %d %d",&boy1.birthday.yeas, &boy1.birthday.month, &boy1.birthday.day);
+    printf("%d年 %d月 %d日\n\n\n",boy1.birthday.yeas, boy1.birthday.month, boy1.birthday.day);
+    boy1 . num = 100;
+    boy1 . name = "陈忠意";
+    printf("请输入sex,score的值：\n");
+    scanf(" %c %f",&boy1.sex, &boy1.score);
+    printf("%d,%s,%c,%.2f\n",boy1.num,boy1.name,boy1.sex,boy1.score);
+    boy2.num = 120;
+    boy2.name = "小意意";
+    printf("%d,%s\n",boy2.num,  boy2.name);
+    return 0;
+}
